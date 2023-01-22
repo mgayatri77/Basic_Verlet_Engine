@@ -18,6 +18,10 @@ sf::Vector2f VerletObject::get_velocity(float dt) const {
     return (current_position - prev_position) / dt;     
 }
 
+void VerletObject::set_current_position(sf::Vector2f pos) {
+    current_position = pos;
+}
+
 void VerletObject::set_velocity(sf::Vector2f v, float dt) {
     prev_position = current_position - v * dt; 
 }

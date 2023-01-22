@@ -5,8 +5,8 @@
 
 int main()
 {
-    constexpr int window_height = 1000;
-    constexpr int window_width = 800;
+    constexpr int window_height = 500;
+    constexpr int window_width = 500;
     constexpr int frame_rate = 60; 
     constexpr int max_objects_count = 1; 
 
@@ -22,6 +22,7 @@ int main()
     // set main attributes
     solver.set_num_substeps(8);
     solver.set_frame_rate(frame_rate);
+    solver.set_constraint({static_cast<float>(window_width) * 0.5f, static_cast<float>(window_height) * 0.5f}, 150.0f);
 
     // add circle    
     const sf::Vector2f object_spawn_position = {500.0f, 200.0f};

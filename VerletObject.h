@@ -30,6 +30,7 @@ class VerletObject {
         float get_radius() const; 
         sf::Color get_color() const;
         sf::Vector2f get_velocity(float dt) const; 
+        void set_current_position(sf::Vector2f pos); 
         void set_velocity(sf::Vector2f v, float dt); 
         void add_velocity(sf::Vector2f v, float dt);
         void accelerate(sf::Vector2f a);
