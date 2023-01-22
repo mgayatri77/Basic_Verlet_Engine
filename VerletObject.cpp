@@ -1,8 +1,20 @@
 #include <cmath>
 #include "VerletObject.h"
 
+sf::Vector2f VerletObject::get_current_position() const {
+    return current_position;     
+}
+
+float VerletObject::get_radius() const {
+    return radius;     
+}
+
+sf::Color VerletObject::get_color() const {
+    return color;     
+}
+
 [[nodiscard]]
-sf::Vector2f VerletObject::get_velocity(float dt) {
+sf::Vector2f VerletObject::get_velocity(float dt) const {
     return (current_position - prev_position) / dt;     
 }
 
@@ -18,7 +30,7 @@ void VerletObject::accelerate(sf::Vector2f a) {
     acceleration += a; 
 }
 
-void VerletObject::update_object(float dt) {
+void VerletObject::update(float dt) {
     // save displacement
     const sf::Vector2f displacement = current_position - prev_position; 
 

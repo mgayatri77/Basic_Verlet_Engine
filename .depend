@@ -1,0 +1,4 @@
+main.o: main.cpp VerletObject.h VerletSolver.h Renderer.h
+Renderer.o: Renderer.cpp Renderer.h VerletSolver.h VerletObject.h
+VerletObject.o: VerletObject.cpp VerletObject.h
+VerletSolver.o: VerletSolver.cpp VerletSolver.h VerletObject.h

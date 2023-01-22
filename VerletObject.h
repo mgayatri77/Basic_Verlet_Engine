@@ -26,9 +26,12 @@ class VerletObject {
             color(aColor) {};
         
         // define public methods
-        sf::Vector2f get_velocity(float dt); 
+        sf::Vector2f get_current_position() const; 
+        float get_radius() const; 
+        sf::Color get_color() const;
+        sf::Vector2f get_velocity(float dt) const; 
         void set_velocity(sf::Vector2f v, float dt); 
         void add_velocity(sf::Vector2f v, float dt);
         void accelerate(sf::Vector2f a);
-        void update_object(float dt);
+        void update(float dt);
 };
